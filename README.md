@@ -1,6 +1,3 @@
-<!--
-<a href="http://tinypic.com?ref=a1ha9v" target="_blank"><img src="http://i57.tinypic.com/a1ha9v.jpg" border="0" alt="Image and video hosting by TinyPic"></a>
--->
 <img src="http://i57.tinypic.com/a1ha9v.jpg" border="0" alt="filemon">
 
 <h4>Filemon - simple monitoring cpu temperature, battery capacity and things like this in system tray.</h4>
@@ -25,10 +22,13 @@ This program is <a href="http://www.gtk.org">gtk+</a> and <a href="http://www.im
 <img src="http://i62.tinypic.com/2gumu7p.jpg" border="0" alt="filemon load average">
 
 </br>
+
 <strong>
--o 5: Offset in the file.
--l 4: How many bytes to read.
--u 5: Update interval.
+
+-o 5: Offset in the file.</br>
+-l 4: How many bytes to read.</br>
+-u 5: Update interval.</br>
+
 </strong>
 
 
