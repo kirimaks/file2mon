@@ -26,7 +26,7 @@ SOFTWARE.
 
 gboolean update(struct Icon_data *data)
 {
-  if( pread(data-> fd,data-> text_buff,LTR,0) <= 0) /* Try to read from the file. */
+  if( pread(data-> fd,data-> text_buff, data-> len_to_read, 0) <= 0) /* Try to read from the file. */
   {
       /* Error enter. */
       fprintf(stderr, "*** Filemon first reading error, try to reopen ***\n");
@@ -37,7 +37,7 @@ gboolean update(struct Icon_data *data)
           fprintf(stderr, "Cant reopen the file, exit.\n");
           filemon_exit(data);
       }
-      else if( pread(data-> fd,data-> text_buff,LTR,0) <= 0) /* Try to read from the file again. */
+      else if( pread(data-> fd,data-> text_buff, data-> len_to_read, 0) <= 0) /* Try to read from the file again. */
       {
           /* Second reading was fail too. */
           fprintf(stderr, "Filemon Reading error, exit.\n");

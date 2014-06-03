@@ -45,9 +45,9 @@ SOFTWARE.
 #define FONT_SIZE  		18		/* Default font size.	*/
 #define ENDING_FONT_SIZE 	12		/* Ending font.		*/
 
-#define LTR 2				/* Default length to read. 	*/
-#define BUFFL 100			/* Size of buffers. 		*/	
-#define UPTIME 3			/* Default update interval.	*/
+#define LTR 	2			/* Default length to read. 	*/
+#define BUFFL 	100			/* Size of buffers. 		*/	
+#define UPTIME 	3			/* Default update interval.	*/
 #define TMP_DIR	"/tmp/.filemon/"	/* Temporary directory.		*/
 
 

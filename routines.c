@@ -34,7 +34,7 @@ void check_args(int argc, char **argv, struct Icon_data *data)
 	SHOW_USAGE;
   }
 
-  /* Calculate argrument list. */
+  /* Calculate argrument list. */	/* TODO: check some command line parameters. */
   for(argv++; *argv != NULL; argv++)
   {
       if(**argv == '-')
@@ -68,6 +68,10 @@ void check_args(int argc, char **argv, struct Icon_data *data)
 
 	      case 'c':	/* Font color. */
 	          strcpy(data-> font_color, *(argv+1));
+		  break;
+
+	      case 'l':	/* Length to read from file. */
+	      	  data-> len_to_read = atoi(*(argv+1));
 		  break;
 
 	      case 'i': /* Show info. */
