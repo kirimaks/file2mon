@@ -20,13 +20,13 @@ This program is <a href="http://www.gtk.org">gtk+</a> and <a href="http://www.im
 <h5>1. 15m load average:</h5>
 
 <strong>
-	filemon -i -f /proc/loadavg -o 5 -l 4 -u 5 -c yellow -s 18
+&nbsp;&nbsp;filemon -i -f /proc/loadavg -o 5 -l 4 -u 5 -c yellow -s 18
 	
-	<img src="http://i62.tinypic.com/2gumu7p.jpg" border="0" alt="filemon load average">
+&nbsp;&nbsp;<img src="http://i62.tinypic.com/2gumu7p.jpg" border="0" alt="filemon load average">
 
-	-o 5: Offset in the file.
-	-l 4: How many bytes to read.
-	-u 5: Update interval.
+&nbsp;&nbsp;-o 5: Offset in the file.
+&nbsp;&nbsp;-l 4: How many bytes to read.
+&nbsp;&nbsp;-u 5: Update interval.
 </strong>
 
 
