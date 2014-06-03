@@ -1,0 +1,12 @@
+"filemon" - simple program reading from file and show 
+some information in system tray. It's possible to set 
+interval beween readings (update interval) to decrease 
+power consuption. 
+
+Also it takes as arguments:
+	1) Font color.
+	2) Ending string (can be append to the end of the information).
+	3) Title label (will be shown when cursor cover the icon).
+	4) Number of bytes to read from file.
+
+Only file is mandatory argument, another arguments have own default values.
