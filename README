@@ -1,7 +1,7 @@
 "filemon" - simple program reading from file and show 
 some information in system tray. It's possible to set 
 interval beween readings (update interval) to decrease 
-power consuption. 
+cpu usage and power consuption. 
 
 Also it takes as arguments:
 	1) Font color.
