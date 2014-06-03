@@ -1,5 +1,5 @@
 <a href="http://tinypic.com?ref=a1ha9v" target="_blank"><img src="http://i57.tinypic.com/a1ha9v.jpg" border="0" alt="Image and video hosting by TinyPic"></a>
-<h4>Filemon- simple monitoring cpu temperature, battery capacity and things like this in system tray.</h4>
+<h4>Filemon - simple monitoring cpu temperature, battery capacity and things like this in system tray.</h4>
 
 <strong>
 
