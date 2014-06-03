@@ -1,5 +1,3 @@
-#create_icon.c main.c routines.c update.c
-
 BIN = filemon
 CFLAGS = -Wall -Wextra -g `pkg-config --cflags gtk+-3.0 MagickWand`
 LIBS = `pkg-config --libs gtk+-3.0 MagickWand`
