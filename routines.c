@@ -41,6 +41,10 @@ void check_args(int argc, char **argv, struct Icon_data *data)
       {
           switch(*(*argv+1))
 	  {
+	      default:
+	          printf("Unknown argument, exit.\n");
+		  SHOW_USAGE;
+
 	      case 'h':
 	          SHOW_USAGE;
 		  break;
