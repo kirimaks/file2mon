@@ -16,8 +16,7 @@ This program is <a href="http://www.gtk.org">gtk+</a> and <a href="http://www.im
 
 <h5>1. Load average 15m:</h5>
 
-<strong> filemon -i -f /proc/loadavg -o 5 -l 4 -u 5 -c yellow -s 18 </strong>
-</br>
+<pre><code> filemon -i -f /proc/loadavg -o 5 -l 4 -u 5 -c yellow -s 18 </code></pre>
 
 <img src="http://i62.tinypic.com/2gumu7p.jpg" border="0" alt="filemon load average">
 
