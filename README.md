@@ -14,7 +14,7 @@ This program is <a href="http://www.gtk.org">gtk+</a> and <a href="http://www.im
 
 <h4>Examples:</h4> 
 
-<h5>1. 15m load average:</h5>
+<h5>1. Load average 15m:</h5>
 
 <strong> filemon -i -f /proc/loadavg -o 5 -l 4 -u 5 -c yellow -s 18 </strong>
 </br>
@@ -23,12 +23,10 @@ This program is <a href="http://www.gtk.org">gtk+</a> and <a href="http://www.im
 
 </br>
 
-<strong>
+<ul>
 
--o 5: Offset in the file.</br>
--l 4: How many bytes to read.</br>
--u 5: Update interval.</br>
+<li>-o 5: Offset in the file.</li>
+<li>-l 4: How many bytes to read.</li>
+<li>-u 5: Update interval.</li>
 
-</strong>
-
-
+</ul>
