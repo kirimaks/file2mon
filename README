@@ -9,4 +9,4 @@ Also it takes as arguments:
 	3) Title label (will be shown when cursor cover the icon).
 	4) Number of bytes to read from file.
 
-Only file is mandatory argument, another arguments have own default values.
+Only file is mandatory argument, another arguments have it's own default values.
