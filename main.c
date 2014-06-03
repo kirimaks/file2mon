@@ -25,7 +25,7 @@ LIABILITY, WHETHER IN AN ACTION
 
 int main(int argc, char **argv)
 {
-  /* Define the structure and default values. */
+  /* Data structure and default values. */
   struct Icon_data data = { {0}, {0}, {0}, NULL, UPTIME, 0, LTR, "filemon", {0}, FONT_COLOR, TMP_DIR, FONT_SIZE, 0 };
 
   /* Check given arguments and overwrite default values if need. */
