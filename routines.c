@@ -74,8 +74,16 @@ void check_args(int argc, char **argv, struct Icon_data *data)
 	      	  data-> len_to_read = atoi(*(argv+1));
 		  break;
 
+	      case 'o':	/* Offset. */
+	      	  data-> offset = atoi(*(argv+1));
+		  break;
+
 	      case 'i': /* Show info. */
 	          info = 1; 	/* Show info at the end. */
+	          break;
+
+	      case 's':	/* Font size. */
+	          data-> font_size = atoi(*(argv+1));
 	          break;
 
 	      case 'v':
@@ -108,7 +116,6 @@ void check_args(int argc, char **argv, struct Icon_data *data)
   /* Generate file name. */
   srandom(getpid());
   sprintf((char*)data-> tmp_buff, "%d.png", (int)random() % 300);
-
   strcat(data-> path_to_file, (const char*)data-> tmp_buff);
 
   /* Show info if need. */
@@ -118,17 +125,22 @@ void check_args(int argc, char **argv, struct Icon_data *data)
 
 void show_info(struct Icon_data *data)
 {
-  printf("Parameters:\n");
+  printf("\nParameters:\n");
 
   INFO_D(update interval:, data-> update_int);
   INFO_D(lenght to read:, data-> len_to_read); 
+  INFO_D(offset:, data-> offset);
+
   INFO_S(title:, data-> title);
   INFO_S(ending:,(*data-> ending) > 0 ? data-> ending : "NONE");
-  printf("\ticon size: %dx%d\n", IMG_H, IMG_W);
+
   INFO_S(font:, FONT_TYPE);
   INFO_S(font color:, data-> font_color);
-  INFO_D(font size:, FONT_SIZE);
+  INFO_D(font size:, data-> font_size);
+
   INFO_S(file path:, data-> path_to_file);
+
+  printf("\ticon size: %dx%d\n", IMG_H, IMG_W);
 }
 
 void filemon_exit(struct Icon_data *data)

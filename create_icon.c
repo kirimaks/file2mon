@@ -44,16 +44,16 @@ int create_icon(struct Icon_data *data)
   PixelSetColor(px, data-> font_color);		/* Font color. 		*/
   DrawSetFillColor(dr,px);			/* Enable the font.	*/
   DrawSetFont(dr, FONT_TYPE);			/* Font type.		*/
-  DrawSetFontSize(dr, FONT_SIZE);		/* Font size.		*/
+  DrawSetFontSize(dr, data-> font_size);		/* Font size.		*/
 
   /* Draw the text to the background (2 and 3 parameters are position of the text) */
-  DrawAnnotation(dr,0,18,data-> text_buff);
+  DrawAnnotation(dr,0,BASELINE,data-> text_buff);
 
   /* SECOND TEXT (ending). Can be didn't set. */
   if(*data-> ending > 0)
   {
       DrawSetFontSize(dr,ENDING_FONT_SIZE);
-      DrawAnnotation(dr,20,18,(const unsigned char*)data-> ending);
+      DrawAnnotation(dr,data-> font_size + 2, BASELINE,(const unsigned char*)data-> ending);
   }
 
   /* Draw the image on to the magick wand. */

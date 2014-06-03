@@ -37,13 +37,15 @@ SOFTWARE.
 
 /* Image size. */
 #define IMG_H 20
-#define IMG_W 32
+#define IMG_W 36
 
 /* Font config. */
 #define FONT_COLOR 		"white"		/* Default font color. 	*/
 #define FONT_TYPE  		"Ubuntu"	/* Default font. 	*/
-#define FONT_SIZE  		18		/* Default font size.	*/
+#define FONT_SIZE  		19		/* Default font size.	*/
 #define ENDING_FONT_SIZE 	12		/* Ending font.		*/
+
+#define BASELINE	19
 
 #define LTR 	2			/* Default length to read. 	*/
 #define BUFFL 	100			/* Size of buffers. 		*/	
@@ -57,18 +59,21 @@ SOFTWARE.
 
 #define SHOW_USAGE printf("Usage: filemon [file] [args]\n"); 	\
 	printf("\t-h help.\n");					\
+	printf("\t-i show parameters.\n");			\
 	printf("\t-f File to read from.\n"); 			\
 	printf("\t-e Ending string.\n");			\
 	printf("\t-u Update interval.\n");			\
 	printf("\t-t Title label.\n");				\
 	printf("\t-l Bytes to read from file.\n");		\
+	printf("\t-o Offset (read before some bytes).\n");	\
 	printf("\t-c Font color.\n");				\
+	printf("\t-s Font size.\n");				\
 	exit(1)
 
 
 
 /* TYPES */
-struct Icon_data {
+struct Icon_data {			/* TODO: reorganize this type. */
   unsigned char text_buff[BUFFL];
   unsigned char tmp_buff[BUFFL];
   unsigned char saved_file[BUFFL];	/* Place for save given file. */
@@ -84,12 +89,15 @@ struct Icon_data {
 
   char font_color[BUFFL];
   char path_to_file[BUFFL];	/* The path to output icon. 	*/	
+
+  int font_size;
+  int offset;
 };
 
 
 /* PROTOTYPES */
-int create_icon(struct Icon_data*);
-gboolean update(struct Icon_data*);
 void check_args(int, char**, struct Icon_data*);
 void show_info(struct Icon_data*);
 void filemon_exit(struct Icon_data*);
+gboolean update(struct Icon_data*);
+int create_icon(struct Icon_data*);
