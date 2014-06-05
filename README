@@ -1,4 +1,4 @@
-"filemon" - simple program reading from file and show 
+"file2mon" - simple program reading from file and show 
 some information in system tray. It's possible to set 
 interval beween readings (update interval) to decrease 
 cpu usage and power consuption. 
