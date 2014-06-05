@@ -1,6 +1,6 @@
 <img src="http://i57.tinypic.com/a1ha9v.jpg" border="0" alt="file2mon">
 
-<h4>Filemon - monitoring cpu temperature, battery capacity and things like this in system tray.</h4>
+<h4>File2mon - monitoring cpu temperature, battery capacity and things like this in system tray.</h4>
 
 <strong>
 
