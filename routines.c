@@ -22,7 +22,7 @@ OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
 SOFTWARE.
 */
 
-#include"filemon.h"
+#include"file2mon.h"
 
 void check_args(int argc, char **argv, struct Icon_data *data)
 {
@@ -147,7 +147,7 @@ void show_info(struct Icon_data *data)
   printf("\ticon size: %dx%d\n", IMG_H, IMG_W);
 }
 
-void filemon_exit(struct Icon_data *data)
+void file2mon_exit(struct Icon_data *data)
 {
   gtk_main_quit();
 

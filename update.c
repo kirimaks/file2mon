@@ -22,7 +22,7 @@ OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
 SOFTWARE.
 */
 
-#include"filemon.h"
+#include"file2mon.h"
 
 gboolean update(struct Icon_data *data)
 {
@@ -35,13 +35,13 @@ gboolean update(struct Icon_data *data)
       if((data-> fd = open((const char*)data-> saved_file, O_RDONLY)) <= 0)
       {
           fprintf(stderr, "Cant reopen the file, exit.\n");
-          filemon_exit(data);
+          file2mon_exit(data);
       }
       else if( pread(data-> fd,data-> text_buff, data-> len_to_read, data-> offset) <= 0) /* Try to read from the file again. */
       {
           /* Second reading was fail too. */
           fprintf(stderr, "Filemon Reading error, exit.\n");
-          filemon_exit(data);
+          file2mon_exit(data);
       }
   }
 

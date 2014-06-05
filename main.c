@@ -21,12 +21,12 @@ LIABILITY, WHETHER IN AN ACTION
 */
 
 
-#include"filemon.h"
+#include"file2mon.h"
 
 int main(int argc, char **argv)
 {
   /* Data structure and default values. */
-  struct Icon_data data = { {0}, {0}, {0}, NULL, UPTIME, 0, LTR, "filemon", {0}, FONT_COLOR, TMP_DIR, FONT_SIZE, 0 };
+  struct Icon_data data = { {0}, {0}, {0}, NULL, UPTIME, 0, LTR, "file2mon", {0}, FONT_COLOR, TMP_DIR, FONT_SIZE, 0 };
 
   /* Check given arguments and overwrite default values if need. */
   check_args(argc,argv,&data);
@@ -47,7 +47,7 @@ int main(int argc, char **argv)
   gtk_main();
 
   /* Exit. */
-  filemon_exit(&data);
+  file2mon_exit(&data);
 
   return 0;
 }

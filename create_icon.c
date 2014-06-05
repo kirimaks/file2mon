@@ -22,7 +22,7 @@ OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
 SOFTWARE.
 */
 
-#include"filemon.h"
+#include"file2mon.h"
 
 int create_icon(struct Icon_data *data)
 {
