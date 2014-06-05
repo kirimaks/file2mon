@@ -1,4 +1,4 @@
-<img src="http://i57.tinypic.com/a1ha9v.jpg" border="0" alt="filemon">
+<img src="http://i57.tinypic.com/a1ha9v.jpg" border="0" alt="file2mon">
 
 <h4>Filemon - monitoring cpu temperature, battery capacity and things like this in system tray.</h4>
 
@@ -14,7 +14,7 @@ This program is <a href="http://www.gtk.org">gtk+</a> and <a href="http://www.im
 
 <h4>Examples:</h4> 
 <h5>1. CPU temperature:</h5>
-<pre><code>filemon -i -f /sys/class/hwmon/hwmon1/device/temp1_input -e C -t cputemp -u 3 -l 2 -c white -s 22</code></pre>
+<pre><code>file2mon -i -f /sys/class/hwmon/hwmon1/device/temp1_input -e C -t cputemp -u 3 -l 2 -c white -s 22</code></pre>
 <img src="http://i58.tinypic.com/wvwhsi.jpg">
 </br>
 <ul>
@@ -27,7 +27,7 @@ This program is <a href="http://www.gtk.org">gtk+</a> and <a href="http://www.im
 </ul>
 
 <h5>2. Battery: </h5>
-<pre><code>filemon -i -f /sys/class/power_supply/BAT1/capacity -e % -t battery -u 5 -l 2 -c yellow -s 22</code></pre>
+<pre><code>file2mon -i -f /sys/class/power_supply/BAT1/capacity -e % -t battery -u 5 -l 2 -c yellow -s 22</code></pre>
 <img src="http://i57.tinypic.com/6dz6ms.jpg">
 </br>
 <ul>
@@ -41,8 +41,8 @@ This program is <a href="http://www.gtk.org">gtk+</a> and <a href="http://www.im
 </ul>
 
 <h5>3. Load average 15min:</h5>
-<pre><code> filemon -i -f /proc/loadavg -o 5 -l 4 -u 5 -c yellow -s 18 </code></pre>
-<img src="http://i62.tinypic.com/2gumu7p.jpg" border="0" alt="filemon load average">
+<pre><code> file2mon -i -f /proc/loadavg -o 5 -l 4 -u 5 -c yellow -s 18 </code></pre>
+<img src="http://i62.tinypic.com/2gumu7p.jpg" border="0" alt="file2mon load average">
 
 </br>
 <ul>
