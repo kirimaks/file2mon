@@ -1,4 +1,4 @@
-BIN = filemon
+BIN = file2mon
 CFLAGS = -Wall -Wextra -g `pkg-config --cflags gtk+-3.0 MagickWand`
 LIBS = `pkg-config --libs gtk+-3.0 MagickWand`
 DSTD = /usr/bin
@@ -22,7 +22,7 @@ routines.o: routines.c
 update.o: update.c
 	gcc -c -o update.o update.c ${CFLAGS}
 
-filemon: main.o create_icon.o routines.o update.o
+file2mon: main.o create_icon.o routines.o update.o
 	gcc ${CFLAGS} -o ${BIN} main.o create_icon.o routines.o update.o ${LIBS}
 
 install:
