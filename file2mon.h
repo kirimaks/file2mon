@@ -101,3 +101,4 @@ void show_info(struct Icon_data*);
 void file2mon_exit(struct Icon_data*);
 gboolean update(struct Icon_data*);
 int create_icon(struct Icon_data*);
+size_t strlen_no_n(const char*);

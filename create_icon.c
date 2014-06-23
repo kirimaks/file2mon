@@ -50,10 +50,15 @@ int create_icon(struct Icon_data *data)
   DrawAnnotation(dr,0,BASELINE,data-> text_buff);
 
   /* SECOND TEXT (ending). Can be didn't set. */
-  if(*data-> ending > 0)
+  if(*data-> ending)
   {
       DrawSetFontSize(dr,ENDING_FONT_SIZE);
-      DrawAnnotation(dr,data-> font_size + 2, BASELINE,(const unsigned char*)data-> ending);
+
+      size_t ending_offset;	/* Offset of ending character after the text */
+
+      ending_offset = (data-> font_size / 2) * strlen_no_n((const char*)data-> text_buff);
+
+      DrawAnnotation(dr, ending_offset+2, BASELINE,(const unsigned char*)data-> ending);
   }
 
   /* Draw the image on to the magick wand. */

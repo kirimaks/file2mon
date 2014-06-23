@@ -158,3 +158,13 @@ void file2mon_exit(struct Icon_data *data)
   if(data-> fd) close(data-> fd);
   exit(1);
 }
+
+size_t strlen_no_n(const char *s)
+{
+  char *sp = (char*)s;
+
+  while(*sp != '\n' && *sp != '\0')
+      sp++;
+
+  return sp - s;
+}
