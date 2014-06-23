@@ -109,7 +109,9 @@ void check_args(int argc, char **argv, struct Icon_data *data)
 
   if(stat(TMP_DIR, &st) < 0)
   {
+  /*
       printf("Try to create temporary directory.\n");
+   */
 
       if(mkdir(TMP_DIR, S_IRWXU | S_IRWXG | S_IROTH | S_IXOTH) < 0)
       {
@@ -149,6 +151,7 @@ void show_info(struct Icon_data *data)
 
 void file2mon_exit(struct Icon_data *data)
 {
+  /* TODO: Clean up */
   gtk_main_quit();
 
   /* Close the file. */

@@ -44,7 +44,7 @@ int create_icon(struct Icon_data *data)
   PixelSetColor(px, data-> font_color);		/* Font color. 		*/
   DrawSetFillColor(dr,px);			/* Enable the font.	*/
   DrawSetFont(dr, FONT_TYPE);			/* Font type.		*/
-  DrawSetFontSize(dr, data-> font_size);		/* Font size.		*/
+  DrawSetFontSize(dr, data-> font_size);	/* Font size.		*/
 
   /* Draw the text to the background (2 and 3 parameters are position of the text) */
   DrawAnnotation(dr,0,BASELINE,data-> text_buff);
