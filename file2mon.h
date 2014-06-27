@@ -22,6 +22,9 @@ OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
 SOFTWARE.
 */
 
+#ifndef _file2mon_h
+#define _file2mon_h
+
 /* INCLUDES */
 #include<stdio.h>
 #include<stdlib.h>	/* exit()	*/
@@ -102,3 +105,5 @@ void file2mon_exit(struct Icon_data*);
 gboolean update(struct Icon_data*);
 int create_icon(struct Icon_data*);
 size_t strlen_no_n(const char*);
+
+#endif
