@@ -1,5 +1,5 @@
 BIN = file2mon
-CFLAGS = -Wall -Wextra -g `pkg-config --cflags gtk+-3.0 MagickWand`
+CFLAGS = -Wall -Wextra -g -O2 `pkg-config --cflags gtk+-3.0 MagickWand`
 LIBS = `pkg-config --libs gtk+-3.0 MagickWand`
 DSTD = /usr/bin
 
@@ -11,7 +11,7 @@ clean:
 	rm ${BIN} *o
 
 main.o: main.c
-	gcc -c -o main.o main.c	${CFLAGS}
+	gcc -c -o main.o main.c ${CFLAGS}
 
 create_icon.o: create_icon.c
 	gcc -c -o create_icon.o create_icon.c ${CFLAGS}
@@ -23,7 +23,7 @@ update.o: update.c
 	gcc -c -o update.o update.c ${CFLAGS}
 
 file2mon: main.o create_icon.o routines.o update.o
-	gcc ${CFLAGS} -o ${BIN} main.o create_icon.o routines.o update.o ${LIBS}
+	gcc -o ${BIN} main.o create_icon.o routines.o update.o ${LIBS}
 
 install:
 	install ./${BIN} ${DSTD}

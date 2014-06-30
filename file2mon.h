@@ -68,7 +68,7 @@ SOFTWARE.
 	printf("\t-u Update interval.\n");			\
 	printf("\t-t Title label.\n");				\
 	printf("\t-l Bytes to read from file.\n");		\
-	printf("\t-o Offset (read before some bytes).\n");	\
+	printf("\t-o Offset (read after some bytes).\n");	\
 	printf("\t-c Font color.\n");				\
 	printf("\t-s Font size.\n");				\
 	exit(1)
