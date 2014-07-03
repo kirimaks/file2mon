@@ -26,19 +26,15 @@ SOFTWARE.
 
 gboolean update(struct Icon_data *data)
 {
-  if( pread(data-> fd,data-> text_buff, data-> len_to_read, data-> offset) <= 0) /* Try to read from the file. */
-  {
+  if( pread(data-> fd,data-> text_buff, data-> len_to_read, data-> offset) <= 0) { /* Try to read from the file. */
       /* Error enter. */
       fprintf(stderr, "*** Filemon first reading error, try to reopen ***\n");
 
       /* If pread return error, try to open it again(Due to suspend and so on). */
-      if((data-> fd = open((const char*)data-> saved_file, O_RDONLY)) <= 0)
-      {
+      if((data-> fd = open((const char*)data-> saved_file, O_RDONLY)) <= 0) {
           fprintf(stderr, "Cant reopen the file, exit.\n");
           file2mon_exit(data);
-      }
-      else if( pread(data-> fd,data-> text_buff, data-> len_to_read, data-> offset) <= 0) /* Try to read from the file again. */
-      {
+      } else if( pread(data-> fd,data-> text_buff, data-> len_to_read, data-> offset) <= 0) { /* Try to read from the file again. */
           /* Second reading was fail too. */
           fprintf(stderr, "Filemon Reading error, exit.\n");
           file2mon_exit(data);
@@ -54,8 +50,7 @@ gboolean update(struct Icon_data *data)
    * Or if it's different, create new icon and reset the icon.
    * Also copy current text to temporary buffer for future comparisons.
    */
-  if(strcmp( (const char*)data-> text_buff, (const char*)data-> tmp_buff) != 0)
-  {
+  if(strcmp( (const char*)data-> text_buff, (const char*)data-> tmp_buff) != 0) {
       create_icon(data);						/* Create new icon. 			*/
       gtk_status_icon_set_from_file(data-> icon, data-> path_to_file);	/* Reset the icon.  			*/
       strcpy( (char*)data-> tmp_buff, (const char*)data-> text_buff);	/* Copy new lalue to temporary buffer. 	*/

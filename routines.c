@@ -28,19 +28,15 @@ void check_args(int argc, char **argv, struct Icon_data *data)
 {
   unsigned char info = 0;	/* Flag for info. */
 
-  if(argc == 1)
-  {
-	printf("No arguments, exit.\n");
-	SHOW_USAGE;
+  if(argc == 1) {
+      printf("No arguments, exit.\n");
+      SHOW_USAGE;
   }
 
   /* Calculate argrument list. */	/* TODO: check some command line parameters. */
-  for(argv++; *argv != NULL; argv++)
-  {
-      if(**argv == '-')
-      {
-          switch(*(*argv+1))
-	  {
+  for(argv++; *argv != NULL; argv++) {
+      if(**argv == '-') {
+          switch(*(*argv+1)) {
 	      default:
 	          printf("Unknown argument, exit.\n");
 		  SHOW_USAGE;
@@ -98,8 +94,7 @@ void check_args(int argc, char **argv, struct Icon_data *data)
   }
 
   /* Check if the file wasn't set. If it wasn't set, nothing to do and exit. */
-  if(data-> fd <= 0)
-  {
+  if(data-> fd <= 0) {
       printf("The file didn't set properly, quit\n");
       exit(1);
   }
@@ -107,14 +102,12 @@ void check_args(int argc, char **argv, struct Icon_data *data)
   /* Create temporary directory if doesn't exist. */
   struct stat st;
 
-  if(stat(TMP_DIR, &st) < 0)
-  {
+  if(stat(TMP_DIR, &st) < 0) {
   /*
       printf("Try to create temporary directory.\n");
    */
 
-      if(mkdir(TMP_DIR, S_IRWXU | S_IRWXG | S_IROTH | S_IXOTH) < 0)
-      {
+      if(mkdir(TMP_DIR, S_IRWXU | S_IRWXG | S_IROTH | S_IXOTH) < 0) {
           perror("Cant create directory.\n");
       }
   }
@@ -156,6 +149,7 @@ void file2mon_exit(struct Icon_data *data)
 
   /* Close the file. */
   if(data-> fd) close(data-> fd);
+
   exit(1);
 }
 

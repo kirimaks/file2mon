@@ -50,11 +50,10 @@ int create_icon(struct Icon_data *data)
   DrawAnnotation(dr,0,BASELINE,data-> text_buff);
 
   /* SECOND TEXT (ending). Can be didn't set. */
-  if(*data-> ending)
-  {
+  if(*data-> ending) {
       DrawSetFontSize(dr,ENDING_FONT_SIZE);
 
-      size_t ending_offset;	/* Offset of ending character after the text */
+      size_t ending_offset = 0;	/* Offset of ending character after the text */
 
       ending_offset = (data-> font_size / 2) * strlen_no_n((const char*)data-> text_buff);
 

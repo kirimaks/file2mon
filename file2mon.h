@@ -27,7 +27,7 @@ SOFTWARE.
 
 /* INCLUDES */
 #include<stdio.h>
-#include<stdlib.h>	/* exit()	*/
+#include<stdlib.h>
 #include<errno.h>
 #include<sys/stat.h>
 #include<fcntl.h>	/* open(). 	*/
